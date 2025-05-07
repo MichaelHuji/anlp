@@ -117,7 +117,7 @@ if do_predict:
     input_sentences = test_dataset["sentence1"], test_dataset["sentence2"]
 
     # Open the file to write predictions
-    prediction_file_path = "./prediction.txt"
+    prediction_file_path = "./predictions.txt"
     with open(prediction_file_path, "w") as f:
         for sentence1, sentence2, label in zip(*input_sentences, predicted_labels):
             f.write(f"{sentence1}###{sentence2}###{label}\n")
